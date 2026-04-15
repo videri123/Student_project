@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: student-mlflow-api-service
+  name: student-mlflow-app-service
 spec:
   selector:
-    app: student-mlflow-api
+    app: student-mlflow-app
   ports:
     - protocol: TCP
       port: 5000
