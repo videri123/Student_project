@@ -17,7 +17,7 @@ from sklearn.metrics import accuracy_score, confusion_matrix, classification_rep
 
 # Define local paths for data and model
 local_data_path = "data/StudentPerformanceFactors.csv"
-local_model_path = "model/student_model.pkl"
+local_model_path = "model/model.pkl"
 
 #load the dataset into a Pandas DataFrame and Create data folder if it doesn't exist
 os.makedirs(os.path.dirname(local_data_path), exist_ok=True)    

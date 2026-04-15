@@ -3,7 +3,6 @@ pandas
 scikit-learn
 boto3
 mlflow
-pickle
 joblib  
 shutil
 os
