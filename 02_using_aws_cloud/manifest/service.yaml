@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: student-mlflow-api-service
+spec:
+  selector:
+    app: student-mlflow-api
+  ports:
+    - protocol: TCP
+      port: 5000
+      targetPort: 5000
+      nodePort: 30080
+  type: NodePort

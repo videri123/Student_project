@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: student-mlflow-api
+
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: student-mlflow-api
+  template:
+    metadata:
+      labels:
+        app: student-mlflow-api
+    spec:
+      containers:
+        - name: student-mlflow-api
+          image: chswarnak/student-mlflow-api:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 5000
+          livenessProbe:
+            httpGet:
+                  path: /health
+                  port: 5000
+            initialDelaySeconds: 20
+            periodSeconds: 10
+
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 5000
+            initialDelaySeconds: 10
+            periodSeconds: 5
+
