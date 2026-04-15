@@ -3,5 +3,3 @@ pandas
 scikit-learn
 boto3
 mlflow
-joblib  
-os
